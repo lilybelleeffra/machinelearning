@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ml5 Object Detection Demo</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="libraries/p5.min.js"></script>
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/makeabilitylab/p5js/_libraries/serial.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/addons/p5.sound.min.js"></script>
+   <script src="https://unpkg.com/ml5@0.4.2/dist/ml5.min.js"></script>
+  </head>
+  <body>
+    <div id="video-holder"></div>
+    <div id="controls-holder">
+      <div>
+        <label for="timeline-slider">Timeline Slider</label>
+        <input
+          type="range"
+          min="0"
+          max="1034"
+          value="0"
+          id="timeline-slider"
+        /><span class="slider-value" id="timeline-slider-value">0</span>
+      </div>
+      <div>
+        <label for="confidence-slider">Min-Confidence Slider</label>
+        <input
+          type="range"
+          min="0"
+          max="1"
+          value="0"
+          step="0.01"
+          id="confidence-slider"
+        /><span class="slider-value" id="confidence-slider-value">0.00</span>
+      </div>
+      <div>
+        <label for="show-results">Show Results</label>
+        <input
+          type="checkbox"
+          name="show-results"
+          id="show-results-input"
+          checked
+        />
+      </div>
+      <div>
+        <label for="categories-holder">Unique Categories</label>
+        <ul id="categories-holder"></ul>
+      </div>
+      <div>
+        <button id="serialConnect">Connect</button>
+      </div>
+    </div>
+    <script src="js/apple.js"></script>
+
+  </body>
+</html>
